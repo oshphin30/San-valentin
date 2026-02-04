@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Kimberly 💕</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #ffb3b3, #ffcccc);
+    }
+
+    .card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 15px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #ccc;
+    }
+
+    /* GIF mediano con fade in */
+    #gif {
+      display: none;
+      opacity: 0;
+      margin: 15px auto 0;
+      width: 180px;      /* 👈 tamaño mediano */
+      max-width: 100%;
+      border-radius: 10px;
+      animation: fadeIn 1.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h2>Kimberly 💕</h2>
+    <p id="text">¿Serías mi San Valentín?</p>
+
+    <div class="buttons" id="buttons">
+      <button class="yes" onclick="showGif()">Sí</button>
+      <button class="no">No</button>
+    </div>
+
+    <img
+      id="gif"
+      src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyZGNiNTFkaTVibjdmc3k0NnZtazdmcDNyeDBxd2RmemJ6cDF2ZzY3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sdK7zJb4BKiyoR9k8L/giphy.gif"
+      alt="GIF romántico"
+    >
+  </div>
+
+  <script>
+    function showGif() {
+      document.getElementById("gif").style.display = "block";
+      document.getElementById("text").innerText = "¡Sabía que dirías que sí! 💖🥰";
+      document.getElementById("buttons").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
